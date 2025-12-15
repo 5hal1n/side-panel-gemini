@@ -1,0 +1,33 @@
+{
+  "name": "Gemini Side Panel",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Displays Gemini in the Chrome Side Panel.",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "permissions": [
+    "sidePanel",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Gemini Side Panel"
+  },
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "https://accounts.google.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
