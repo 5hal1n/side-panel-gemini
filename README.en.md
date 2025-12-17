@@ -25,7 +25,7 @@ This extension is intended for internal use and requires manual installation.
     Toggle the **Developer mode** switch in the top right corner.
 
 4.  **Load Unpacked:**
-    Click **Load unpacked** and select the **`side-panel-gemini` directory** inside the folder you unzipped.
+    Click **Load unpacked** and select the **`side-panel-gemini` directory** you unzipped.
 
 ## ⚠️ Disclaimer
 
