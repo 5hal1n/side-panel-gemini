@@ -1,0 +1,27 @@
+{
+  "name": "side-panel-gemini",
+  "version": "1.0.0",
+  "description": "[English README](docs/README.en.md)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && npm run copy-assets",
+    "copy-assets": "ncp src/manifest.json dist/manifest.json && ncp src/sidepanel.html dist/sidepanel.html && ncp src/rules.json dist/rules.json && ncp src/icons dist/icons && ncp src/_metadata dist/_metadata",
+    "watch": "concurrently \"tsc -w\" \"npm run copy-assets\"",
+    "lint": "biome lint .",
+    "format": "biome format --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.9",
+    "@types/chrome": "^0.1.32",
+    "concurrently": "^9.2.1",
+    "ncp": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}

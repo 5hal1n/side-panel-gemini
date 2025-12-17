@@ -12,15 +12,13 @@ function focusInput() {
     'div[contenteditable="true"]',
     'rich-textarea > div',
     'textarea',
-    'input[type="text"]'
+    'input[type="text"]',
   ];
 
   for (const selector of selectors) {
     const element = document.querySelector(selector);
-    if (element) {
+    if (element instanceof HTMLElement) {
       element.focus();
-      // console.log('Gemini Side Panel: Focused input element:', selector);
-      return;
     }
   }
   // console.log('Gemini Side Panel: Could not find input element to focus.');
