@@ -9,8 +9,7 @@
     "dev": "plasmo dev",
     "build": "plasmo build",
     "package": "plasmo package",
-    "lint": "biome lint .",
-    "format": "biome format --write ."
+    "check": "biome check ."
   },
   "dependencies": {
     "plasmo": "^0.90.5",
