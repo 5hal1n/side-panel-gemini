@@ -17,8 +17,7 @@ jobs:
 
       - name: Create ZIP archive
         run: |
-          cd src
-          zip -r ../side-panel-gemini-${{ github.ref_name }}.zip . -x "*.DS_Store"
+          zip -r side-panel-gemini-${{ github.ref_name }}.zip src -x "*.DS_Store"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
