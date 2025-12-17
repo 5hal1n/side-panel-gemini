@@ -31,6 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
       ]);
 
       showStatus('Copied to clipboard! Paste below.', 'success');
+      
+      // Attempt to focus the input area in the Gemini iframe
+      const iframe = document.querySelector('iframe');
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({ type: 'GEMINI_SIDE_PANEL_FOCUS' }, '*');
+      }
+
     } catch (err) {
       console.error('Screenshot failed:', err);
       // Show specific error message if available

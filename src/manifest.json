@@ -23,6 +23,14 @@
     "https://accounts.google.com/*",
     "<all_urls>"
   ],
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
   "declarative_net_request": {
     "rule_resources": [
       {
