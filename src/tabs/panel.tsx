@@ -100,7 +100,7 @@ const SidePanel = () => {
       />
 
       <div className="ad-container">
-        <a href="https://google.com" target="_blank" className="ad-link" rel="noreferrer">
+        <a href="https://banso-corp.com" target="_blank" className="ad-link" rel="noreferrer">
           <div className="ad-content">
             <img src={corporateLogo} alt="Corporate Logo" className="corporate-logo" />
           </div>
