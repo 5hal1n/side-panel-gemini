@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  background-color: rgb(240, 244, 248);
+  color: #202124;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.toolbar {
+  padding: 8px;
+  background: rgb(240, 244, 248);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dadce0;
+  flex-shrink: 0;
+}
+
+.screenshot-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.screenshot-btn:hover {
+  background-color: #1557b0;
+}
+
+.screenshot-btn:active {
+  background-color: #174ea6;
+}
+
+.status {
+  font-size: 12px;
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status.success {
+  color: #137333;
+  opacity: 1;
+}
+
+.status.error {
+  color: #d93025;
+  opacity: 1;
+}
+
+.main-frame {
+  flex-grow: 1;
+  width: 100%;
+  border: none;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.ad-container {
+  height: 60px;
+  background: rgb(240, 244, 248);
+  border-top: 1px solid #dadce0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ad-link {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #5f6368;
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  body, .container, .toolbar, .ad-container {
+    background-color: rgb(0, 0, 0);
+    color: #e8eaed;
+  }
+
+  .toolbar {
+    border-bottom: 1px solid #3c4043;
+  }
+
+  .screenshot-btn {
+    background-color: #8ab4f8;
+    color: rgb(0, 0, 0);
+  }
+
+  .screenshot-btn:hover {
+    background-color: #a6c8ff;
+  }
+
+  .screenshot-btn:active {
+    background-color: #d2e3fc;
+  }
+
+  .status.success {
+    color: #81c995;
+  }
+
+  .status.error {
+    color: #f28b82;
+  }
+
+  .ad-container {
+    border-top: 1px solid #3c4043;
+  }
+}
+
+/* RegistrationForm styles */
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+  text-align: center;
+  flex-grow: 1; /* Allows it to take up available space */
+}
+
+.registration-container h2 {
+  font-size: 24px;
+  color: #202124;
+  margin-bottom: 10px;
+}
+
+.registration-container p {
+  font-size: 14px;
+  color: #5f6368;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  color: #3c4043;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input[type="email"],
+.form-group input[type="text"] {
+  width: calc(100% - 20px); /* Adjust for padding */
+  padding: 10px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #202124;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1a73e8; /* Google Blue focus */
+  box-shadow: 0 0 0 1px #1a73e8;
+}
+
+.register-btn {
+  background-color: #1a73e8; /* Standard Google Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.register-btn:hover {
+  background-color: #1557b0; /* Darker Google Blue */
+}
+
+/* Dark mode adjustments for registration form */
+@media (prefers-color-scheme: dark) {
+  .registration-container h2 {
+    color: #e8eaed;
+  }
+  .registration-container p {
+    color: #bdc1c6;
+  }
+  .form-group label {
+    color: #bdc1c6;
+  }
+  .form-group input[type="email"],
+  .form-group input[type="text"] {
+    background-color: #202124;
+    border-color: #3c4043;
+    color: #e8eaed;
+  }
+  .form-group input:focus {
+    border-color: #8ab4f8; /* Lighter Google Blue focus */
+    box-shadow: 0 0 0 1px #8ab4f8;
+  }
+  .register-btn {
+    background-color: #8ab4f8;
+    color: rgb(0, 0, 0); /* Black text on lighter blue button */
+  }
+  .register-btn:hover {
+    background-color: #a6c8ff;
+  }
+}
