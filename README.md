@@ -28,7 +28,7 @@ This extension is intended for internal use and requires manual installation.
     Toggle the **Developer mode** switch in the top right corner.
 
 4.  **Load Unpacked:**
-    Click **Load unpacked** and select the `src` directory within the cloned project folder.
+    Click **Load unpacked** and select the **`src` directory** inside the folder you unzipped.
 
 ## ⚠️ Disclaimer
 
