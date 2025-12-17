@@ -12,13 +12,14 @@
       flex-direction: column;
       overflow: hidden;
       font-family: 'Google Sans', Roboto, Arial, sans-serif;
-      background-color: #ffffff;
+      background-color: rgb(240, 244, 248);
       color: #202124;
+      /* Google Sans text color for light mode */
     }
 
     #toolbar {
       padding: 8px;
-      background: #f1f3f4;
+      background: rgb(240, 244, 248);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -28,6 +29,7 @@
 
     #screenshot-btn {
       background-color: #1a73e8;
+      /* Standard Google Blue */
       color: white;
       border: none;
       padding: 6px 12px;
@@ -43,10 +45,12 @@
 
     #screenshot-btn:hover {
       background-color: #1557b0;
+      /* Darker Google Blue */
     }
 
     #screenshot-btn:active {
       background-color: #174ea6;
+      /* Even Darker Google Blue */
     }
 
     #status-msg {
@@ -61,10 +65,12 @@
 
     .status.success {
       color: #137333;
+      /* Google Green */
     }
 
     .status.error {
       color: #d93025;
+      /* Google Red */
     }
 
     iframe {
@@ -83,18 +89,21 @@
     /* Dark mode support */
     @media (prefers-color-scheme: dark) {
       body {
-        background-color: #202124;
+        background-color: rgb(0, 0, 0);
         color: #e8eaed;
+        /* Google Sans text color for dark mode */
       }
 
       #toolbar {
-        background: #292a2d;
+        background: rgb(0, 0, 0);
         border-bottom: 1px solid #3c4043;
       }
 
       #screenshot-btn {
         background-color: #8ab4f8;
-        color: #202124;
+        /* Lighter Google Blue for dark mode */
+        color: rgb(0, 0, 0);
+        /* Black text on lighter blue button */
       }
 
       #screenshot-btn:hover {
