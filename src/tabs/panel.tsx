@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import RegistrationForm from "~tabs/RegistrationForm"
 import "~tabs/styles.css"
-import corporateLogo from "url:~assets/corporate.png" // Use relative path
+import corporateLogo from "url:~assets/corporate.png"
 
 // 登録済みデータを保存するStorageキー
 const REGISTRATION_KEY = "isRegistered"
