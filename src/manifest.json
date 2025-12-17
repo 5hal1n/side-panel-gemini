@@ -9,7 +9,8 @@
   "permissions": [
     "sidePanel",
     "declarativeNetRequest",
-    "declarativeNetRequestWithHostAccess"
+    "declarativeNetRequestWithHostAccess",
+    "activeTab"
   ],
   "background": {
     "service_worker": "background.js"
