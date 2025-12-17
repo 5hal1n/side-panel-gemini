@@ -1,36 +1,39 @@
 # ♊ side-panel-gemini
 
-[日本語版 README (Japanese)](README.ja.md)
+[English README](README.en.md)
 
-**side-panel-gemini** is a Chrome extension that integrates Google Gemini directly into your browser's side panel. Boost your productivity with seamless AI assistance alongside your browsing.
+**side-panel-gemini** は、Google Gemini をブラウザのサイドパネルに直接統合する Chrome 拡張機能です。ブラウジングと並行してシームレスな AI アシスタンスを利用し、生産性を向上させましょう。
 
-## ✨ Features
+## ✨ 機能
 
-*   **Side Panel Integration:** Access Gemini instantly without switching tabs.
-*   **📸 One-Click Screenshot:** Capture the current tab and copy it to your clipboard with a single click.
-*   **⚡ Auto-Focus:** Automatically focuses the input field after capturing, so you can just press `Cmd+V` (or `Ctrl+V`) to paste and ask "What is this?".
-*   **🌗 Dark Mode Support:** Automatically adapts to your system's light or dark theme for a comfortable visual experience.
+*   **サイドパネル統合:** タブを切り替えることなく、Gemini に即座にアクセスできます。
+*   **📸 ワンクリック スクリーンショット:** 現在のタブのスクリーンショットをワンクリックで撮影し、クリップボードにコピーします。
+*   **⚡ 自動フォーカス:** 撮影後、自動的に入力フィールドにフォーカスが当たるため、`Cmd+V` (または `Ctrl+V`) を押すだけで画像を貼り付け、「これは何？」と尋ねることができます。
+*   **🌗 ダークモード対応:** システムのライトテーマまたはダークテーマに自動的に適応し、快適な視覚体験を提供します。
 
-## 🚀 Installation
+## 🚀 インストール方法
 
-This extension is intended for internal use and requires manual installation.
+この拡張機能は社内での利用を想定しており、手動でのインストールが必要です。
 
-1.  **Download the latest release:**
-    Go to the [Releases page](https://github.com/shalin/side-panel-gemini/releases) and download the `side-panel-gemini-<version>.zip` file from the latest release.
+1.  **最新版のリリースをダウンロード:**
+    [Releases ページ](https://github.com/shalin/side-panel-gemini/releases) にアクセスし、最新のリリースから `side-panel-gemini-<version>.zip` ファイルをダウンロードしてください。
 
-2.  **Open Chrome Extensions:**
-    Navigate to `chrome://extensions/` in your Chrome browser.
+2.  **Chrome 拡張機能ページを開く:**
+    Google Chrome ブラウザを開き、`chrome://extensions/` にアクセスします。
 
-3.  **Enable Developer Mode:**
-    Toggle the **Developer mode** switch in the top right corner.
+3.  **デベロッパーモードを有効にする:**
+    拡張機能ページの右上にある **「デベロッパーモード」** のスイッチをオンにします。
 
-4.  **Load Unpacked:**
-    Click **Load unpacked** and select the **`src` directory** inside the folder you unzipped.
+4.  **パッケージされていない拡張機能を読み込む:**
+    表示される **「パッケージされていない拡張機能を読み込む」** ボタンをクリックします。ファイルダイアログが開きます。
 
-## ⚠️ Disclaimer
+5.  **`src` ディレクトリを選択する:**
+    解凍したフォルダ内の **`src` ディレクトリ** に移動し、選択します。
 
-This software is provided "as is", without warranty of any kind. Use at your own risk. This project is for internal and educational purposes.
+## ⚠️ 免責事項
 
-## 🤝 Contributing
+本ソフトウェアは「現状有姿」で提供され、いかなる種類の保証もありません。ご自身の責任においてご利用ください。このプロジェクトは社内および教育目的で使用されるものです。
 
-Feel free to open issues or submit pull requests if you have suggestions or improvements!
+## 🤝 貢献
+
+ご提案や改善点がありましたら、お気軽に Issue を開いたり、プルリクエストを送信してください！

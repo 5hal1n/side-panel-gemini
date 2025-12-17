@@ -35,4 +35,9 @@ The project has been initialized with basic Chrome extension files.
     5.  **Push:** Push the tag to the remote repository to trigger the GitHub Release workflow.
 
 ### Documentation Synchronization
-- **README.md and README.ja.md:** When `README.md` is updated, the AI agent must also update `README.ja.md` to ensure content consistency. The agent is responsible for translating and verifying the changes manually.
+- **README.md and README.en.md:** When `README.md` is updated, the AI agent must also update `README.en.md` to ensure content consistency. The agent is responsible for translating and verifying the changes manually.
+
+### Git Workflow
+- **Commit and Push:** After completing any task or making significant changes, the AI agent **must** commit the changes to the Git repository and push them to the remote.
+    - **Commit Message:** Commit messages should be clear, concise, and descriptive of the changes made.
+    - **Frequency:** Commit regularly to maintain a clear history of changes.

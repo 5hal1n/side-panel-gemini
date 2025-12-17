@@ -1,0 +1,13 @@
+description = "Automate the release process: version bump, tag, and push."
+prompt = """
+Please perform the release process for this project.
+
+1.  Analyze the git diff since the last tag.
+2.  Determine the next semantic version (Major, Minor, or Patch).
+3.  Update the `version` in `src/manifest.json`.
+4.  Commit the changes with a message like "chore: Bump version to X.Y.Z".
+5.  Create a git tag "vX.Y.Z".
+6.  Push the tag to origin.
+
+Execute these steps autonomously.
+"""
