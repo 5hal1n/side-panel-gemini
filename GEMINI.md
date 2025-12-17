@@ -27,9 +27,12 @@ The project has been initialized with basic Chrome extension files.
 ## Development Conventions
 
 ### Versioning & Release
-- **Versioning:** When making changes (features, fixes), update the `version` field in `src/manifest.json` following Semantic Versioning (MAJOR.MINOR.PATCH).
-- **Tagging:** After updating the version, create a git tag in the format `v1.0.0` matching the manifest version.
-- **Release:** Pushing a tag starting with `v` will trigger a GitHub Action to create a new Release and attach a zipped extension package.
+- **Automated Workflow:** Upon receiving a "version update" or "release" request, the AI agent will:
+    1.  **Analyze Changes:** Review commits since the last release tag to understand the scope of changes.
+    2.  **Determine Version:** Select the appropriate Semantic Version increment (Major, Minor, or Patch) based on the analysis.
+    3.  **Update Manifest:** Update the `version` field in `src/manifest.json`.
+    4.  **Commit & Tag:** Commit the version bump and create a git tag (e.g., `v1.1.0`).
+    5.  **Push:** Push the tag to the remote repository to trigger the GitHub Release workflow.
 
 ### Documentation Synchronization
 - **README.md and README.ja.md:** When `README.md` is updated, the AI agent must also update `README.ja.md` to ensure content consistency. The agent is responsible for translating and verifying the changes manually.
