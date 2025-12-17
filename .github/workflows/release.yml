@@ -24,6 +24,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: side-panel-gemini-${{ github.ref_name }}.zip
-          body_path: RELEASE_BODY.md
+          body_path: docs/RELEASE_BODY.md
           draft: false
           prerelease: false

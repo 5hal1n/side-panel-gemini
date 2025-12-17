@@ -1,6 +1,6 @@
 # ♊ side-panel-gemini
 
-[English README](README.en.md)
+[English README](docs/README.en.md)
 
 **side-panel-gemini** は、Google Gemini をブラウザのサイドパネルに直接統合する Chrome 拡張機能です。ブラウジングと並行してシームレスな AI アシスタンスを利用し、生産性を向上させましょう。
 
