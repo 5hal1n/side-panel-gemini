@@ -27,7 +27,7 @@ The project has been initialized with basic Chrome extension files.
 ## Development Conventions
 
 ### Versioning & Release
-- **Automated Workflow:** Upon receiving a "version update" or "release" request, the AI agent will:
+- **Automated Workflow:** The release process is triggered by a slash command. When performing a release, the AI agent **must** ensure that a descriptive release note in Japanese is written in `RELEASE_BODY.md`.
     1.  **Analyze Changes:** Review commits since the last release tag to understand the scope of changes.
     2.  **Determine Version:** Select the appropriate Semantic Version increment (Major, Minor, or Patch) based on the analysis.
     3.  **Update Manifest:** Update the `version` field in `src/manifest.json`.
