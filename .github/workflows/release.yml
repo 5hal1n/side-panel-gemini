@@ -15,9 +15,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Adjust to your project's Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
       - name: Create ZIP archive
         run: |
-          mv src side-panel-gemini
+          mv dist side-panel-gemini
           zip -r side-panel-gemini-${{ github.ref_name }}.zip side-panel-gemini -x "*.DS_Store"
 
       - name: Create Release
