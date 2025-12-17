@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import type React from 'react';
+import { useState } from 'react';
 
 interface RegistrationFormProps {
   onRegister: (data: { email: string; company: string }) => void;
 }
 
 const RegistrationForm: React.FC<RegistrationFormProps> = ({ onRegister }) => {
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email && company) {
       onRegister({ email, company });
     } else {
-      alert("メールアドレスと会社名を両方入力してください。");
+      alert('メールアドレスと会社名を両方入力してください。');
     }
   };
 
@@ -42,7 +43,9 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onRegister }) => {
             required
           />
         </div>
-        <button type="submit" className="register-btn">利用開始</button>
+        <button type="submit" className="register-btn">
+          利用開始
+        </button>
       </form>
     </div>
   );

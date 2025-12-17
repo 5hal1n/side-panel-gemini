@@ -6,7 +6,7 @@ export const config: PlasmoCSConfig = {
 }
 
 // Listen for messages from the extension (side panel)
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message) => {
   if (message.type === 'GEMINI_SIDE_PANEL_FOCUS') {
     focusInput();
   }

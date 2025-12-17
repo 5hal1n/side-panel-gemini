@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
-import RegistrationForm from "~tabs/RegistrationForm"
-import "~tabs/styles.css"
-import corporateLogo from "url:../assets/corporate.png"
+import { useEffect, useState } from 'react';
+import RegistrationForm from '~tabs/RegistrationForm';
+import '~tabs/styles.css';
+import corporateLogo from 'url:../assets/corporate.png';
 
 // 登録済みデータを保存するStorageキー
-const REGISTRATION_KEY = "isRegistered"
-const USER_DATA_KEY = "userData"
+const REGISTRATION_KEY = 'isRegistered';
+const USER_DATA_KEY = 'userData';
 
 const SidePanel = () => {
   const [isRegistered, setIsRegistered] = useState<boolean | null>(null); // nullはロード中
@@ -19,29 +19,35 @@ const SidePanel = () => {
 
   const handleRegister = (data: { email: string; company: string }) => {
     // 登録データをchrome.storage.localに保存
-    chrome.storage.local.set({
-      [REGISTRATION_KEY]: true,
-      [USER_DATA_KEY]: data, // ユーザーデータも保存しておく
-    }, () => {
-      setIsRegistered(true);
-      alert("登録が完了しました！Gemini Side Panelをご利用いただけます。");
-      // 後でここにデータを外部送信するロジックを追加できます
-      console.log("User registered:", data);
-    });
+    chrome.storage.local.set(
+      {
+        [REGISTRATION_KEY]: true,
+        [USER_DATA_KEY]: data, // ユーザーデータも保存しておく
+      },
+      () => {
+        setIsRegistered(true);
+        alert('登録が完了しました。Gemini Side Panelをご利用いただけます。');
+        // 後でここにデータを外部送信するロジックを追加できます
+        console.log('User registered:', data);
+      },
+    );
   };
 
-  const [status, setStatus] = useState<{ msg: string; type: "success" | "error" | "" }>({ msg: "", type: "" });
+  const [status, setStatus] = useState<{ msg: string; type: 'success' | 'error' | '' }>({
+    msg: '',
+    type: '',
+  });
 
   const handleScreenshot = async () => {
     try {
       const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
       if (!tabs || tabs.length === 0 || !tabs[0].id) {
-          showStatus("No active tab found", "error");
-          return;
+        showStatus('No active tab found', 'error');
+        return;
       }
 
       const dataUrl = await chrome.tabs.captureVisibleTab(chrome.windows.WINDOW_ID_CURRENT, {
-        format: "png",
+        format: 'png',
       });
 
       const res = await fetch(dataUrl);
@@ -53,23 +59,24 @@ const SidePanel = () => {
         }),
       ]);
 
-      showStatus("Screenshot copied!", "success");
+      showStatus('Screenshot copied!', 'success');
 
-      chrome.tabs.sendMessage(tabs[0].id, {
-        type: 'GEMINI_SIDE_PANEL_FOCUS',
-      }).catch(() => {
+      chrome.tabs
+        .sendMessage(tabs[0].id, {
+          type: 'GEMINI_SIDE_PANEL_FOCUS',
+        })
+        .catch(() => {
           // Ignore errors if content script is not injected or not ready
-      });
-
-    } catch (err: any) {
+        });
+    } catch (err) {
       console.error(err);
-      showStatus("Failed to capture", "error");
+      showStatus('Failed to capture', 'error');
     }
   };
 
-  const showStatus = (msg: string, type: "success" | "error") => {
+  const showStatus = (msg: string, type: 'success' | 'error') => {
     setStatus({ msg, type });
-    setTimeout(() => setStatus({ msg: "", type: "" }), 3000);
+    setTimeout(() => setStatus({ msg: '', type: '' }), 3000);
   };
 
   if (isRegistered === null) {
@@ -83,17 +90,23 @@ const SidePanel = () => {
   return (
     <div className="container">
       <div className="toolbar">
-        <button className="screenshot-btn" onClick={handleScreenshot} title="Take screenshot of current tab and copy to clipboard">
+        <button
+          type="button"
+          className="screenshot-btn"
+          onClick={handleScreenshot}
+          title="Take screenshot of current tab and copy to clipboard"
+        >
           <svg className="icon" viewBox="0 0 24 24">
+            <title>Capture & Copy Icon</title>
             <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
           </svg>
           Capture & Copy
         </button>
         <span className={`status ${status.type}`}>{status.msg}</span>
       </div>
-      
-      <iframe 
-        src="https://gemini.google.com" 
+
+      <iframe
+        src="https://gemini.google.com"
         allow="microphone; clipboard-read; clipboard-write"
         className="main-frame"
         title="Gemini"
