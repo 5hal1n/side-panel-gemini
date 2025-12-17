@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]);
 
       showStatus('Copied to clipboard! Paste below.', 'success');
-      
+
       // Attempt to focus the input area in the Gemini iframe
       const iframe = document.querySelector('iframe');
       if (iframe && iframe.contentWindow) {
