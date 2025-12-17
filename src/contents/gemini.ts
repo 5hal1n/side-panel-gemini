@@ -25,7 +25,7 @@ function focusInput() {
     const element = document.querySelector(selector);
     if (element instanceof HTMLElement) {
       element.focus();
-      return; 
+      return;
     }
   }
 }
