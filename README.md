@@ -1,29 +1,39 @@
-# side-panel-gemini
+# ♊ side-panel-gemini
 
-## Project Overview
-This is a Chrome extension project.
+[日本語版 README (Japanese)](README.ja.md)
 
-## Installation Guide
-To install this Chrome extension, follow these steps:
+**side-panel-gemini** is a Chrome extension that integrates Google Gemini directly into your browser's side panel. Boost your productivity with seamless AI assistance alongside your browsing.
 
-1.  **Clone the repository (or download the source code):**
-    If you have Git installed, you can clone the repository:
+## ✨ Features
+
+*   **Side Panel Integration:** Access Gemini instantly without switching tabs.
+*   **📸 One-Click Screenshot:** Capture the current tab and copy it to your clipboard with a single click.
+*   **⚡ Auto-Focus:** Automatically focuses the input field after capturing, so you can just press `Cmd+V` (or `Ctrl+V`) to paste and ask "What is this?".
+*   **🌗 Dark Mode Support:** Automatically adapts to your system's light or dark theme for a comfortable visual experience.
+
+## 🚀 Installation
+
+This extension is intended for internal use and requires manual installation.
+
+1.  **Clone the repository:**
     ```bash
     git clone https://github.com/shalin/side-panel-gemini.git
     cd side-panel-gemini
     ```
-    Alternatively, download the `src` directory content manually.
 
-2.  **Open Chrome Extensions Page:**
-    Open your Google Chrome browser and navigate to `chrome://extensions`.
+2.  **Open Chrome Extensions:**
+    Navigate to `chrome://extensions/` in your Chrome browser.
 
 3.  **Enable Developer Mode:**
-    In the top right corner of the extensions page, toggle on the "Developer mode" switch.
+    Toggle the **Developer mode** switch in the top right corner.
 
-4.  **Load the unpacked extension:**
-    Click on the "Load unpacked" button that appears. A file dialog will open.
+4.  **Load Unpacked:**
+    Click **Load unpacked** and select the `src` directory within the cloned project folder.
 
-5.  **Select the `src` directory:**
-    Navigate to and select the `src` directory from where you cloned/downloaded the project.
+## ⚠️ Disclaimer
 
-Once loaded, the `side-panel-gemini` extension will appear in your list of installed extensions and should be ready for use.
+This software is provided "as is", without warranty of any kind. Use at your own risk. This project is for internal and educational purposes.
+
+## 🤝 Contributing
+
+Feel free to open issues or submit pull requests if you have suggestions or improvements!
