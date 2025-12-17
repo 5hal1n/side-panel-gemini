@@ -86,6 +86,40 @@
       fill: currentColor;
     }
 
+    /* Ad Container Styles */
+    #ad-container {
+      height: 60px;
+      /* Fixed height for ad */
+      background: rgb(240, 244, 248);
+      border-top: 1px solid #dadce0;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #ad-link {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #ad-content {
+      /* Styling for the ad content */
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #5f6368;
+      font-weight: 500;
+    }
+
     /* Dark mode support */
     @media (prefers-color-scheme: dark) {
       body {
@@ -121,6 +155,11 @@
       .status.error {
         color: #f28b82;
       }
+
+      #ad-container {
+        background: rgb(0, 0, 0);
+        border-top: 1px solid #3c4043;
+      }
     }
   </style>
 </head>
@@ -137,6 +176,14 @@
     <span id="status-msg"></span>
   </div>
   <iframe src="https://gemini.google.com" allow="microphone; clipboard-read; clipboard-write"></iframe>
+  <div id="ad-container">
+    <a href="https://google.com" target="_blank" id="ad-link">
+      <div id="ad-content">
+        <!-- Placeholder for Ad content -->
+        <span>Sponsored: Your Ad Here</span>
+      </div>
+    </a>
+  </div>
   <script src="sidepanel.js"></script>
 </body>
 
