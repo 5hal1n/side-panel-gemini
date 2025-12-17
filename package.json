@@ -1,7 +1,7 @@
 {
   "name": "side-panel-gemini",
   "displayName": "Gemini Side Panel",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Displays Gemini in the Chrome Side Panel.",
   "type": "module",
   "author": "Shalin",
