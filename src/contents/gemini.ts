@@ -1,7 +1,13 @@
-// Listen for postMessages from the parent (side panel)
-window.addEventListener('message', (event) => {
-  // Verify the message structure
-  if (event.data && event.data.type === 'GEMINI_SIDE_PANEL_FOCUS') {
+import type { PlasmoCSConfig } from "plasmo"
+
+export const config: PlasmoCSConfig = {
+  matches: ["https://gemini.google.com/*"],
+  all_frames: true
+}
+
+// Listen for messages from the extension (side panel)
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'GEMINI_SIDE_PANEL_FOCUS') {
     focusInput();
   }
 });
@@ -19,7 +25,7 @@ function focusInput() {
     const element = document.querySelector(selector);
     if (element instanceof HTMLElement) {
       element.focus();
+      return; 
     }
   }
-  // console.log('Gemini Side Panel: Could not find input element to focus.');
 }

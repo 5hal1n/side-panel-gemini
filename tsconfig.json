@@ -1,15 +1,16 @@
 {
+  "extends": "plasmo/templates/tsconfig.base",
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["chrome"]
+    "baseUrl": ".",
+    "paths": {
+      "~*": [
+        "./src/*"
+      ]
+    }
   },
-  "include": ["src/**/*"]
+  "include": [
+    ".plasmo/index.d.ts",
+    "src",
+    ".plasmo"
+  ]
 }
