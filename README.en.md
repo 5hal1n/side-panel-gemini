@@ -16,7 +16,7 @@
 This extension is intended for internal use and requires manual installation.
 
 1.  **Download the latest release:**
-    Go to the [Releases page](https://github.com/shalin/side-panel-gemini/releases) and download the `side-panel-gemini-<version>.zip` file from the latest release.
+    Go to the [Releases page](https://github.com/5hal1n/side-panel-gemini/releases) and download the `side-panel-gemini-<version>.zip` file from the latest release.
 
 2.  **Open Chrome Extensions:**
     Navigate to `chrome://extensions/` in your Chrome browser.
