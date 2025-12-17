@@ -32,4 +32,4 @@ The project has been initialized with basic Chrome extension files.
 - **Release:** Pushing a tag starting with `v` will trigger a GitHub Action to create a new Release and attach a zipped extension package.
 
 ### Documentation Synchronization
-- **README.md and README.ja.md:** When `README.md` is updated, `README.ja.md` should also be updated to reflect the changes. This process can be automated using a GitHub Actions workflow that integrates with a third-party translation API (e.g., DeepL, Google Cloud Translation). Implementing this would require setting up API keys as GitHub Secrets and considering translation review processes.
+- **README.md and README.ja.md:** When `README.md` is updated, the AI agent must also update `README.ja.md` to ensure content consistency. The agent is responsible for translating and verifying the changes manually.
