@@ -25,4 +25,8 @@ The project has been initialized with basic Chrome extension files.
 2.  **Update Documentation:** Continue to update this `GEMINI.md` file as the project evolves and new conventions are established.
 
 ## Development Conventions
-*No conventions established yet.*
+
+### Versioning & Release
+- **Versioning:** When making changes (features, fixes), update the `version` field in `src/manifest.json` following Semantic Versioning (MAJOR.MINOR.PATCH).
+- **Tagging:** After updating the version, create a git tag in the format `v1.0.0` matching the manifest version.
+- **Release:** Pushing a tag starting with `v` will trigger a GitHub Action to create a new Release and attach a zipped extension package.
