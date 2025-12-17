@@ -39,5 +39,8 @@ The project has been initialized with basic Chrome extension files.
 
 ### Git Workflow
 - **Commit and Push:** After completing any task or making significant changes, the AI agent **must** commit the changes to the Git repository and push them to the remote.
-    - **Commit Message:** Commit messages should be clear, concise, and descriptive of the changes made.
+    - **Commit Message:** Adhere strictly to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+        - Format: `<type>: <description>`
+        - Common Types: `feat` (new feature), `fix` (bug fix), `docs` (documentation), `chore` (maintenance/tooling), `refactor` (code restructuring).
+        - Example: `feat: Add option to customize side panel width`
     - **Frequency:** Commit regularly to maintain a clear history of changes.
