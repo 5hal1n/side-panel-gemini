@@ -12,6 +12,8 @@
       flex-direction: column;
       overflow: hidden;
       font-family: 'Google Sans', Roboto, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #202124;
     }
 
     #toolbar {
@@ -76,6 +78,40 @@
       width: 16px;
       height: 16px;
       fill: currentColor;
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #202124;
+        color: #e8eaed;
+      }
+
+      #toolbar {
+        background: #292a2d;
+        border-bottom: 1px solid #3c4043;
+      }
+
+      #screenshot-btn {
+        background-color: #8ab4f8;
+        color: #202124;
+      }
+
+      #screenshot-btn:hover {
+        background-color: #a6c8ff;
+      }
+
+      #screenshot-btn:active {
+        background-color: #d2e3fc;
+      }
+
+      .status.success {
+        color: #81c995;
+      }
+
+      .status.error {
+        color: #f28b82;
+      }
     }
   </style>
 </head>
