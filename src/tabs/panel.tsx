@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import RegistrationForm from "~tabs/RegistrationForm"; // RegisterFormをインポート
-import "~tabs/styles.css"; // スタイルシートをインポート
+import React, { useState, useEffect } from "react"
+import RegistrationForm from "~tabs/RegistrationForm"
+import "~tabs/styles.css"
 
 // 登録済みデータを保存するStorageキー
-const REGISTRATION_KEY = "isRegistered";
-const USER_DATA_KEY = "userData";
+const REGISTRATION_KEY = "isRegistered"
+const USER_DATA_KEY = "userData"
 
 const SidePanel = () => {
   const [isRegistered, setIsRegistered] = useState<boolean | null>(null); // nullはロード中
@@ -53,7 +53,7 @@ const SidePanel = () => {
       ]);
 
       showStatus("Screenshot copied!", "success");
-      
+
       chrome.tabs.sendMessage(tabs[0].id, {
         type: 'GEMINI_SIDE_PANEL_FOCUS',
       }).catch(() => {
@@ -101,7 +101,7 @@ const SidePanel = () => {
       <div className="ad-container">
         <a href="https://google.com" target="_blank" className="ad-link" rel="noreferrer">
           <div className="ad-content">
-             <span>Sponsored: Your Ad Here</span>
+            <img src="/corporate.png" alt="Corporate Logo" className="corporate-logo" />
           </div>
         </a>
       </div>
