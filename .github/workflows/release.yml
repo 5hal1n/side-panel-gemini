@@ -21,18 +21,15 @@ jobs:
           node-version: '20' # Adjust to your project's Node.js version
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Package extension
         run: npm run package
 
-      - name: Rename Release Asset
-        run: mv build/chrome-mv3-prod.zip side-panel-gemini-${{ github.ref_name }}.zip
-
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: side-panel-gemini-${{ github.ref_name }}.zip
+          files: mv build/chrome-mv3-prod.zip
           body_path: docs/RELEASE_BODY.md
           draft: false
           prerelease: false
