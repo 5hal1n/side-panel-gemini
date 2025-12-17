@@ -33,6 +33,7 @@
     ],
     "permissions": [
       "sidePanel",
+      "storage",
       "declarativeNetRequest",
       "declarativeNetRequestWithHostAccess",
       "activeTab"
