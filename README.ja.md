@@ -13,11 +13,8 @@
 
 この拡張機能は社内での利用を想定しており、手動でのインストールが必要です。
 
-1.  **リポジトリのクローン:**
-    ```bash
-    git clone https://github.com/shalin/side-panel-gemini.git
-    cd side-panel-gemini
-    ```
+1.  **最新版のリリースをダウンロード:**
+    [Releases ページ](https://github.com/shalin/side-panel-gemini/releases) にアクセスし、最新のリリースから `side-panel-gemini-<version>.zip` ファイルをダウンロードしてください。
 
 2.  **Chrome 拡張機能ページを開く:**
     Google Chrome ブラウザを開き、`chrome://extensions/` にアクセスします。
