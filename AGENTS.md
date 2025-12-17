@@ -25,7 +25,7 @@ The project has been initialized with basic Chrome extension files.
 
 ### Suggested Actions
 1.  **Develop Extension Features:** Implement the desired functionality for the Chrome extension within the `src` directory.
-2.  **Update Documentation:** Continue to update this `GEMINI.md` file as the project evolves and new conventions are established.
+2.  **Update Documentation:** Continue to update this `AGENTS.md` file as the project evolves and new conventions are established.
 
 ## Development Conventions
 
