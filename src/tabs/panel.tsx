@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import RegistrationForm from "~tabs/RegistrationForm"
 import "~tabs/styles.css"
-import "data-base64:~assets/corporate.png"
+import corporateLogo from "url:~assets/corporate.png" // Use relative path
 
 // 登録済みデータを保存するStorageキー
 const REGISTRATION_KEY = "isRegistered"
@@ -102,7 +102,7 @@ const SidePanel = () => {
       <div className="ad-container">
         <a href="https://google.com" target="_blank" className="ad-link" rel="noreferrer">
           <div className="ad-content">
-            <img src="/corporate.png" alt="Corporate Logo" className="corporate-logo" />
+            <img src={corporateLogo} alt="Corporate Logo" className="corporate-logo" />
           </div>
         </a>
       </div>
