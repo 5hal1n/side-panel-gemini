@@ -20,7 +20,8 @@
   },
   "host_permissions": [
     "https://gemini.google.com/*",
-    "https://accounts.google.com/*"
+    "https://accounts.google.com/*",
+    "<all_urls>"
   ],
   "declarative_net_request": {
     "rule_resources": [
