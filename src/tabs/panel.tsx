@@ -50,24 +50,12 @@ const SidePanel = () => {
         format: 'png',
       });
 
-      const res = await fetch(dataUrl);
-      const blob = await res.blob();
+      chrome.tabs.sendMessage(tabs[0].id, {
+        type: 'GEMINI_SIDE_PANEL_PASTE_IMAGE',
+        dataUrl,
+      });
 
-      await navigator.clipboard.write([
-        new ClipboardItem({
-          [blob.type]: blob,
-        }),
-      ]);
-
-      showStatus('Screenshot copied!', 'success');
-
-      chrome.tabs
-        .sendMessage(tabs[0].id, {
-          type: 'GEMINI_SIDE_PANEL_FOCUS',
-        })
-        .catch(() => {
-          // Ignore errors if content script is not injected or not ready
-        });
+      showStatus('Pasting screenshot...', 'success');
     } catch (err) {
       console.error(err);
       showStatus('Failed to capture', 'error');
@@ -94,13 +82,13 @@ const SidePanel = () => {
           type="button"
           className="screenshot-btn"
           onClick={handleScreenshot}
-          title="Take screenshot of current tab and copy to clipboard"
+          title="Take screenshot of current tab and paste to Gemini"
         >
           <svg className="icon" viewBox="0 0 24 24">
-            <title>Capture & Copy Icon</title>
+            <title>Capture & Paste Icon</title>
             <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
           </svg>
-          Capture & Copy
+          Capture & Paste
         </button>
         <span className={`status ${status.type}`}>{status.msg}</span>
       </div>
